@@ -54,6 +54,51 @@ class cliente(entidad):
         else:
             raise ValueError("Estado no valido")
         
+# funciones de la gestion al cliente
+
+def mostrar_cliente(lista):
+    for c in lista:
+        c.mostrar_detalle()
+        
+def agregar_cliente(lista):
+    nombre = input("nombre: ")
+    edad = int(input("edad:"))
+    estado = input("estado:")
+    
+    nuevo = cliente(nombre, edad, estado)
+    lista.append(nuevo)
+    print("cliente agregado")
+    
+def buscar_cliente(lista, nombre):
+    for c in lista:
+        if c.nombre.lower() == nombre.lower():
+            return c
+    return None
+
+def eliminar_cliente(lista, nombre):
+    c = buscar_cliente(lista, nombre)
+    if c:
+        lista.remove(c)
+        print("cliente eliminado")
+    else:
+        print("cliente no encontrado")
+
+def actualizar_cliente(lista, nombre):
+    c = buscar_cliente(lista, nombre)
+    if c:
+            nuevo_nombre = input("nuevo nombre: ")
+            nueva_edad = int(input("nueva edad: "))
+            nuevo_estado = input("nuevo estado: ")
+
+            c.nombre = nuevo_nombre
+            c.edad = nueva_edad
+            c.estado = nuevo_estado
+            print("cliente actualizado")
+       
+    else:
+        print("cliente no encontrado")
+
+
         
     
         
