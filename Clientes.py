@@ -2,12 +2,12 @@ from abc import ABC, abstractmethod
 
 # clase base
 class entidad(ABC):
-   def __init__(self,nombre):
-       self._nombre = nombre
-       
-       @abstractmethod
-       def mostrar_detalle(self):
-           pass
+    def __init__(self, nombre):
+        self._nombre = nombre
+
+    @abstractmethod
+    def mostrar_detalle(self):
+        pass
      
 #clase hija cliente
 class cliente(entidad):
