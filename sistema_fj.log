@@ -1,0 +1,37 @@
+2026-05-04 22:12:09 | INFO     | ============================================================
+2026-05-04 22:12:09 | INFO     | NUEVA SESIÓN INICIADA - 2026-05-04 22:12:09
+2026-05-04 22:12:09 | INFO     | ============================================================
+2026-05-04 22:12:26 | INFO     | Cliente agregado: roussell
+2026-05-04 22:12:33 | INFO     | ============================================================
+2026-05-04 22:12:33 | INFO     | NUEVA SESIÓN INICIADA - 2026-05-04 22:12:33
+2026-05-04 22:12:33 | INFO     | ============================================================
+2026-05-04 22:12:33 | INFO     | OP01 | Cliente válido registrado: Juan Pérez
+2026-05-04 22:12:33 | ERROR    | OP02 | Edad inválida rechazada | Excepción: ErrorEdadInvalida: [Código E002] La edad '-5' no es válida. Debe ser un número mayor a 0.
+2026-05-04 22:12:33 | ERROR    | OP03 | Estado inválido rechazado | Excepción: ErrorEstadoInvalido: [Código E003] El estado 'suspendido' no es válido. Use 'activo' o 'inactivo'.
+2026-05-04 22:12:33 | ERROR    | OP04 | Nombre vacío rechazado | Excepción: ErrorNombreVacio: [Código E001] El nombre no puede estar vacío.
+2026-05-04 22:12:33 | INFO     | OP05 | Cliente válido registrado: María López
+2026-05-04 22:12:33 | INFO     | OP06 | Cliente actualizado: Juan Pérez → edad 31
+2026-05-04 22:12:33 | WARNING  | OP07 | Búsqueda sin resultado
+2026-05-04 22:12:33 | ERROR    | OP08 | Servicio no disponible al reservar | Excepción: ErrorServicioNoDisponible: [Código E005] El servicio 'Sala VIP' no está disponible en este momento.
+2026-05-04 22:12:33 | ERROR    | OP09 | Duración inválida rechazada | Excepción: ErrorDuracionInvalida: [Código E006] La duración '-2' no es válida. Debe ser un número positivo.
+2026-05-04 22:12:33 | ERROR    | OP10 | Intento de operar reserva cancelada | Excepción: ErrorReservaCancelada: [Código E008] No se puede operar sobre una reserva que ya fue cancelada.
+2026-05-04 22:12:33 | ERROR    | OP11 | Parámetro faltante al crear cliente | Excepción: ErrorParametroFaltante: [Código E009] El parámetro 'estado' es obligatorio y no fue proporcionado.
+2026-05-04 22:12:33 | INFO     | OP12 | Listado de 3 cliente(s) mostrado
+2026-05-04 22:12:38 | INFO     | Usuario seleccionó salir del sistema
+2026-05-04 22:12:38 | INFO     | SESIÓN CERRADA CORRECTAMENTE
+2026-05-04 22:12:38 | INFO     | ============================================================
+2026-05-04 22:13:51 | INFO     | ============================================================
+2026-05-04 22:13:51 | INFO     | NUEVA SESIÓN INICIADA - 2026-05-04 22:13:51
+2026-05-04 22:13:51 | INFO     | ============================================================
+2026-05-04 22:14:02 | ERROR    | Error inesperado al agregar cliente | Excepción: ErrorTipoIncorrecto: [Código E010] El campo 'edad' debe ser de tipo número entero positivo.
+2026-05-04 22:14:14 | ERROR    | Intento fallido de agregar cliente | Excepción: ErrorEstadoInvalido: [Código E003] El estado '2' no es válido. Use 'activo' o 'inactivo'.
+2026-05-04 22:15:17 | WARNING  | Intento de eliminar cliente inexistente: rous
+2026-05-04 22:15:32 | INFO     | Usuario seleccionó salir del sistema
+2026-05-04 22:15:32 | INFO     | SESIÓN CERRADA CORRECTAMENTE
+2026-05-04 22:15:32 | INFO     | ============================================================
+2026-05-04 22:15:37 | INFO     | ============================================================
+2026-05-04 22:15:37 | INFO     | NUEVA SESIÓN INICIADA - 2026-05-04 22:15:37
+2026-05-04 22:15:37 | INFO     | ============================================================
+2026-05-04 22:15:52 | ERROR    | Error inesperado al agregar cliente | Excepción: ErrorTipoIncorrecto: [Código E010] El campo 'edad' debe ser de tipo número entero positivo.
+2026-05-04 22:16:09 | INFO     | Cliente agregado: rous
+2026-05-04 22:16:23 | INFO     | Cliente eliminado: rous
