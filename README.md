@@ -2,7 +2,7 @@
 Tarea #4 de Programacion — Curso: Programación 213023 | UNAD  
 Programa: Ingeniería de Sistemas | Escuela ECBTI
 
-Bitacora de Avances del maneo de errores y pruebas del software (Roussell Nova)
+Bitacora de Avances del manejo de errores y pruebas del software (Roussell Nova)
 
 
 ### [v0.1] Primera Interevencion 
