@@ -7,7 +7,7 @@ Bitacora de Avances del maneo de errores y pruebas del software (Roussell Nova)
 
 ### [v0.1] Primera Interevencion 
 
-Se realizo la primera simulacion de los logs, se realizo el 04/05/2026, evidenciandose en el archivo .log sus respectivos avances, estas pruebas validan que funcionan correctamente los logs de crear, eliminar, ver y excepciones intencionales realazadas para las pruebas
+Se realizo la primera simulacion de los logs, se realizo el 04/05/2026, evidenciandose en el archivo .log sus respectivos avances, estas pruebas validan que funcionan correctamente los logs de crear, eliminar, ver y las excepciones intencionales realizadas para las pruebas
 
 `excepciones.py`
 Se creo una jerarquía completa de excepciones personalizadas partiendo de la clase base "ErrorSistemaF". Se crearon diez excepciones específicas:
