@@ -5,7 +5,7 @@ from abc import ABC, abstractmethod
 # =========================
 class Servicio(entidad):
     def __init__(self, nombre, precio_base):
-        self().__init__(nombre)
+        super().__init__(nombre)
         self._precio_base = precio_base
         
     @abstractmethod
