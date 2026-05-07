@@ -1,4 +1,7 @@
 from clientes import *
+
+from servicios import *
+
 from clientes import actualizar_cliente
 from clientes import eliminar_cliente
 from clientes import buscar_cliente
@@ -9,8 +12,10 @@ from simulacion import ejecutar_simulacion
 from excepciones import ErrorSistemaFJ
 # -- (borrar) agregados los imports de mis archivos
 
-# Lista principal
+
+# Listas principales
 clientes = []
+servicios = []
 
 # =========================
 # MENU CLIENTES
@@ -61,6 +66,39 @@ def menu_clientes():
             print(f"Error: {e}")
 
 # =========================
+# MENU SERVICIOS
+# =========================
+def menu_servicios():
+    while True:
+        print("\n===== GESTIÓN DE SERVICIOS =====")
+        print("1. Agregar servicio")
+        print("2. Mostrar servicios")
+        print("3. Eliminar servicio")
+        print("4. Volver")
+
+        opcion = input("Seleccione una opción: ")
+
+        try:
+            if opcion == "1":
+                agregar_servicio(servicios)
+
+            elif opcion == "2":
+                mostrar_servicios(servicios)
+
+            elif opcion == "3":
+                nombre = input("Nombre del servicio: ")
+                eliminar_servicio(servicios, nombre)
+
+            elif opcion == "4":
+                break
+
+            else:
+                print("Opción inválida")
+
+        except Exception as e:
+            print(f"Error: {e}")
+
+# =========================
 # MENU PRINCIPAL
 # =========================
 def menu():
@@ -68,22 +106,26 @@ def menu():
     while True:
         print("\n===== SISTEMA SOFTWARE FJ =====")
         print("1. Gestionar clientes")
-        print("2. Simulación completa")
-        print("3. Salir")
+        print("2. Gestionar servicios")  
+        print("3. Simulación completa")
+        print("4. Salir")
 
         opcion = input("Seleccione: ")
 
         if opcion == "1":
             menu_clientes()
-
-        elif opcion == "2":
-            ejecutar_simulacion(clientes, [], [])
-
+        elif opcion == "2":             
+            menu_servicios()
         elif opcion == "3":
+            # Pasamos la lista de servicios para que la simulación la use
+            ejecutar_simulacion(clientes, servicios, []) 
+        
+        elif opcion == "4":
             log_evento("Usuario seleccionó salir del sistema")
             log_cierre_sesion()
             print("Saliendo")
             break
+        
 
         else:
             log_advertencia(f"Opción inválida en menú: {opcion}")

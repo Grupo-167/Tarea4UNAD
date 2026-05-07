@@ -9,8 +9,8 @@ from logger import log_evento, log_error, log_advertencia
 # clase base
 class entidad(ABC):
     def __init__(self, nombre):
-        pass
-
+        self._nombre = nombre  # <---  guardamos el nombre
+        
     @abstractmethod
     def mostrar_detalle(self):
         pass

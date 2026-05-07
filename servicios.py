@@ -1,4 +1,4 @@
-from Clientes import entidad 
+from clientes import entidad 
 from abc import ABC, abstractmethod
 # =========================
 # CLASE ABSTRACTA SERVICIO
