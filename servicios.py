@@ -1,4 +1,5 @@
-from clientes import entidad 
+from datetime import datetime 
+from Clientes import entidad 
 from abc import ABC, abstractmethod
 # =========================
 # CLASE ABSTRACTA SERVICIO
@@ -127,3 +128,50 @@ def eliminar_servicio(lista, nombre):
             print("Servicio eliminado")
             return
     print("Servicio no encontrado")
+    
+    
+class Reserva(entidad): 
+    def __init__(self, cliente, servicio, duracion): 
+        nombre_res = f"Reserva_{cliente.nombre}_{servicio._nombre}"
+        super().__init__(nombre_res)
+        
+        
+        self.cliente = cliente    
+        self.servicio = servicio  
+        self.duracion = duracion
+        self.estado = "Pendiente"
+        self.fecha = datetime.now()
+
+    def mostrar_detalle(self):
+        """Muestra el ticket de la reserva con polimorfismo"""
+        print(f"\n" + "="*30)
+        print(f"   COMPROBANTE: {self._nombre}")
+        print(f"="*30)
+        print(f"Fecha:    {self.fecha.strftime('%d/%m/%Y %H:%M')}")
+        print(f"Cliente:  {self.cliente.nombre}")
+        print(f"Estado:   {self.estado}")
+        print("-" * 30)
+        
+        
+        self.servicio.mostrar_detalle() 
+        
+        
+        costo_total = self.servicio.calcular_costo(self.duracion)
+        
+        print(f"Tiempo:   {self.duracion} hora(s)")
+        print(f"TOTAL:    ${costo_total}")
+        print("="*30)
+
+    def confirmar(self):
+        """Cambia el estado a confirmado"""
+        self.estado = "Confirmada"
+        print(f"Reserva de {self.cliente.nombre} ha sido confirmada.")
+
+    def cancelar(self):
+        """Cancela la reserva"""
+        self.estado = "Cancelada"
+        print(f"Reserva de {self.cliente.nombre} ha sido cancelada.")
+
+    def obtener_resumen(self):
+        """Método extra para alargar el código según la guía"""
+        return f"Ticket {self._nombre} | Total: ${self.servicio.calcular_costo(self.duracion)}"
