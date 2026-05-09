@@ -1,11 +1,11 @@
-from clientes import *
+from Clientes import *
 
 from servicios import *
 
-from clientes import actualizar_cliente
-from clientes import eliminar_cliente
-from clientes import buscar_cliente
-from clientes import mostrar_cliente
+from Clientes import actualizar_cliente
+from Clientes import eliminar_cliente
+from Clientes import buscar_cliente
+from Clientes import mostrar_cliente
 
 from logger import log_inicio_sesion, log_cierre_sesion, log_evento, log_error, log_advertencia
 from simulacion import ejecutar_simulacion
@@ -96,6 +96,7 @@ def menu_servicios():
                 print("Opción inválida")
 
         except Exception as e:
+            log_error("Error en menú de servicios", e)
             print(f"Error: {e}")
 
 # =========================

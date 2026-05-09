@@ -1,6 +1,8 @@
 from datetime import datetime 
 from Clientes import entidad 
 from abc import ABC, abstractmethod
+
+from logger import log_error
 # =========================
 # CLASE ABSTRACTA SERVICIO
 # =========================
@@ -118,12 +120,13 @@ def agregar_servicio(lista):
         print("Servicio agregado correctamente")
 
     except Exception as e:
+        log_error("Error en menú de servicios", e)
         print(f"Error: {e}")
 
 
 def eliminar_servicio(lista, nombre):
     for s in lista:
-        if s._nombre.lower() == nombre.lower():
+        if s.nombre.lower() == nombre.lower():
             lista.remove(s)
             print("Servicio eliminado")
             return

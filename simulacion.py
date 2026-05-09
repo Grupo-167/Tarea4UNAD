@@ -23,7 +23,7 @@
 
 
 
-from clientes import cliente as Cliente
+from Clientes import cliente as Cliente
 from excepciones import *
 from logger import log_evento, log_error, log_advertencia, log_inicio_sesion
 
