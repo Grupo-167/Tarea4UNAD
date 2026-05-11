@@ -1,28 +1,3 @@
-#
-# ------------------------------------------------------------------------------
-#===========       No tocar -- Archivo de moniotoreo de errores     =============#    
-#
-#
-#
-#       Este archivo hace parte de la simulación de operaciones del software 
-#       Contiene todas las operaciones que prueban la creación, actualización y manejo 
-#       de clientes, servicios y reservas, incluyendo casos con errores controlados para
-#       demostrar el manejo de excepciones, se ira actualizando segun los avances.
-#
-#
-#       Por favor no realizar cambios a este archivo, su composicion no afecta 
-#       el funcionamiento del sistema, es solo para fines de monitoreo y demostración.
-#
-#
-#===========                                                      =============#
-#------------------------------------------------------------------------------
-#
-
-
-
-
-
-
 from Clientes import cliente as Cliente
 from excepciones import *
 from logger import log_evento, log_error, log_advertencia, log_inicio_sesion
@@ -32,7 +7,6 @@ def ejecutar_simulacion(lista_clientes, lista_servicios, lista_reservas):
     Ejecuta una batería de operaciones simuladas para demostrar el
     funcionamiento del sistema ante datos válidos e inválidos.
     """
-    log_inicio_sesion()
     print("\n" + "=" * 60)
     print("   SIMULACIÓN COMPLETA - SISTEMA SOFTWARE FJ")
     print("=" * 60)

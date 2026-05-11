@@ -4,12 +4,12 @@ from excepciones import (
     ErrorClienteNoEncontrado
 )
 from logger import log_evento, log_error, log_advertencia
-# -- agregados los imports de mis archivos
+
 
 # clase base
 class entidad(ABC):
     def __init__(self, nombre):
-        self._nombre = nombre  # <---  guardamos el nombre
+        self.nombre = nombre 
         
     @abstractmethod
     def mostrar_detalle(self):
@@ -19,7 +19,6 @@ class entidad(ABC):
 class cliente(entidad):
     def __init__(self, nombre,edad,estado):
         super().__init__(nombre)
-        self.nombre = nombre   
         self.edad = edad       
         self.estado = estado
     
@@ -37,7 +36,6 @@ class cliente(entidad):
             raise ErrorNombreVacio()
         self._nombre = valor.strip()
         
-        # -- (borrar) Cambios realizados por roussell nova para agregar el manejo de errores
     
     # edad
     @property
@@ -53,7 +51,6 @@ class cliente(entidad):
             raise ErrorEdadInvalida(valor)
         self._edad = valor
 
-        # -- (borrar) Cambios realizados por roussell nova para agregar el manejo de errores
         
     # estado
     @property
@@ -66,7 +63,6 @@ class cliente(entidad):
             raise ErrorEstadoInvalido(valor)
         self._estado = valor.lower()
 
-        # -- (borrar) Cambios realizados por roussell nova para agregar el manejo de errores
         
 # funciones de la gestion al cliente
 
@@ -102,7 +98,6 @@ def agregar_cliente(lista):
     finally:
         print("  → Operación de registro finalizada.")
 
-        # -- (borrar) Cambios realizados por Roussell nova para agregar el manejo de errores
     
 def buscar_cliente(lista, nombre):
     for c in lista:
@@ -123,28 +118,40 @@ def eliminar_cliente(lista, nombre):
         log_evento(f"Cliente eliminado: {nombre}")
         print(" →  ✔ Cliente eliminado.")
 
-        # -- (borrar) Cambios realizados por Roussell nova para agregar el manejo de errores
 
 def actualizar_cliente(lista, nombre):
-    c = buscar_cliente(lista, nombre)
-    if c:
-            nuevo_nombre = input("nuevo nombre: ")
-            nueva_edad = int(input("nueva edad: "))
-            nuevo_estado = input("nuevo estado: ")
+    try:
+        c = buscar_cliente(lista, nombre)
+        if c is None:
+            raise ErrorClienteNoEncontrado(nombre)
 
-            c.nombre = nuevo_nombre
-            c.edad = nueva_edad
-            c.estado = nuevo_estado
-            print("cliente actualizado")
-       
+        nuevo_nombre = input("Nuevo nombre: ").strip()
+        nueva_edad   = input("Nueva edad: ").strip()
+        nuevo_estado = input("Nuevo estado (activo/inactivo): ").strip()
+
+        if not nueva_edad.isdigit():
+            from excepciones import ErrorTipoIncorrecto
+            raise ErrorTipoIncorrecto("edad", "número entero positivo")
+
+        c.nombre = nuevo_nombre
+        c.edad   = int(nueva_edad)
+        c.estado = nuevo_estado
+
+    except ErrorClienteNoEncontrado as e:
+        log_advertencia(f"Actualización fallida: cliente '{nombre}' no encontrado")
+        print(f"  ✘ {e}")
+
+    except (ErrorNombreVacio, ErrorEdadInvalida, ErrorEstadoInvalido) as e:
+        log_error(f"Datos inválidos al actualizar cliente '{nombre}'", e)
+        print(f"  ✘ Dato inválido: {e}")
+
+    except Exception as e:
+        log_error(f"Error inesperado al actualizar cliente '{nombre}'", e)
+        print(f"  ✘ Error inesperado: {e}")
+
     else:
-        print("cliente no encontrado")
+        log_evento(f"Cliente actualizado: {nombre}")
+        print("  →  ✔ Cliente actualizado correctamente.")
 
-# Comentario de Rousell nova (Borrar), en espera de actualizacion 
-# para agregar los coponentes de manejo de error que cree en excepciones.py,
-# crea la logica compañero y yo me encargo de adaptarlo, te esta quedando bien,
-# buen trabajo :)
-        
-    
-        
-     
+    finally:
+        print("  → Operación de actualización finalizada.")

@@ -1,16 +1,9 @@
 from Clientes import *
-
 from servicios import *
-
-from Clientes import actualizar_cliente
-from Clientes import eliminar_cliente
-from Clientes import buscar_cliente
-from Clientes import mostrar_cliente
-
 from logger import log_inicio_sesion, log_cierre_sesion, log_evento, log_error, log_advertencia
 from simulacion import ejecutar_simulacion
 from excepciones import ErrorSistemaFJ
-# -- (borrar) agregados los imports de mis archivos
+
 
 
 # Listas principales
@@ -132,8 +125,6 @@ def menu():
             log_advertencia(f"Opción inválida en menú: {opcion}")
             print("Opción inválida")
 
-            # -- (borrar) Cambios realizados por Roussell nova para agregar los logs 
-            #    Tambien se borro la anterior simulacion pueto que existe la nueva
 
 # =========================
 # EJECUCIÓN
@@ -144,6 +135,3 @@ if __name__ == "__main__":
     except Exception as e:
         log_error("Fallo catastrófico al iniciar el sistema", e)
         print(f"El sistema no pudo iniciarse: {e}")
-
-        # -- (borrar)cambios realizados por roussell para agregar el
-        # maneo de errores y evitar caidas inesperadas
