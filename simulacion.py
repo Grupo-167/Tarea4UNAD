@@ -172,3 +172,52 @@ def ejecutar_simulacion(lista_clientes, lista_servicios, lista_reservas):
     print("   SIMULACIÓN FINALIZADA")
     print("=" * 60)
     print("  Revisa el archivo 'sistema_fj.log' para ver el registro completo.")
+        # ── OPERACIÓN 13: Inserción masiva de registros válidos e inválidos ──────────
+    print("\n[OP 13] Inserción masiva de 10 registros — válidos e inválidos")
+    print("-" * 60)
+    
+    datos = [
+        ("María",    22, "activo"),     # válido
+        ("Carlos",   30, "inactivo"),   # válido
+        ("Sofía",    28, "activo"),     # válido
+        ("",         24, "activo"),     # inválido — nombre vacío
+        ("Pedro",    -5, "inactivo"),   # inválido — edad negativa
+        ("Laura",    19, "otros"),      # inválido — estado incorrecto
+        ("Andrés",   45, "activo"),     # válido
+        ("Rosa",      0, "inactivo"),   # inválido — edad cero
+        ("Felipe",   33, "inactivo"),   # válido
+        ("Valentina", 27, "activo"),    # válido
+    ]
+    
+    exitosos = 0
+    fallidos  = 0
+    
+    for i, d in enumerate(datos, 1):
+        try:
+            c = Cliente(d[0], d[1], d[2])
+            lista_clientes.append(c)
+            log_evento(f"OP13 | Registro {i:02d} creado: {c.nombre}")
+            print(f"  [{i:02d}] ✔ Cliente '{d[0]}' creado correctamente.")
+            exitosos += 1
+    
+        except ErrorNombreVacio as e:
+            log_error(f"OP13 | Registro {i:02d} rechazado — nombre vacío", e)
+            print(f"  [{i:02d}] ✘ Nombre vacío: {e}")
+            fallidos += 1
+    
+        except ErrorEdadInvalida as e:
+            log_error(f"OP13 | Registro {i:02d} rechazado — edad inválida: {d[1]}", e)
+            print(f"  [{i:02d}] ✘ Edad inválida '{d[1]}': {e}")
+            fallidos += 1
+    
+        except ErrorEstadoInvalido as e:
+            log_error(f"OP13 | Registro {i:02d} rechazado — estado inválido: {d[2]}", e)
+            print(f"  [{i:02d}] ✘ Estado inválido '{d[2]}': {e}")
+            fallidos += 1
+    
+        finally:
+            log_evento(f"OP13 | Registro {i:02d} procesado — resultado: {'OK' if i <= exitosos + fallidos and d[0] != '' and d[1] > 0 and d[2] in ['activo','inactivo'] else 'FALLO'}")
+    
+    print("-" * 60)
+    print(f"  Resumen: {exitosos} exitosos | {fallidos} fallidos de {len(datos)} intentos")
+    log_evento(f"OP13 | Inserción masiva finalizada: {exitosos} OK, {fallidos} fallidos")
