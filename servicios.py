@@ -176,5 +176,5 @@ class Reserva(entidad):
         print(f"Reserva de {self.cliente.nombre} ha sido cancelada.")
 
     def obtener_resumen(self):
-        """Método extra para alargar el código según la guía"""
+        """Retorna un resumen del ticket con el costo total de la reserva."""
         return f"Ticket {self._nombre} | Total: ${self.servicio.calcular_costo(self.duracion)}"
