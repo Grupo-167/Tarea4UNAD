@@ -9,6 +9,7 @@ from excepciones import ErrorSistemaFJ
 # Listas principales
 clientes = []
 servicios = []
+reservas = []
 
 # =========================
 # MENU CLIENTES
@@ -91,6 +92,64 @@ def menu_servicios():
         except Exception as e:
             log_error("Error en menú de servicios", e)
             print(f"Error: {e}")
+            
+# ==========================================
+# MENU RESERVAS
+# ==========================================
+def menu_reservas():
+    while True:
+        print("\n===== GESTIÓN DE RESERVAS =====")
+        print("1. Crear reserva")
+        print("2. Mostrar detalle de reserva")
+        print("3. Confirmar reserva")
+        print("4. Cancelar reserva")
+        print("5. Volver")
+
+        opcion = input("Seleccione una opción: ")
+
+        try:
+            if opcion == "1":
+                # Aquí se asume que tienes acceso a las listas de clientes y servicios
+                nombre_c = input("Nombre del cliente para la reserva: ")
+                nombre_s = input("Nombre del servicio a reservar: ")
+                
+                # Buscamos los objetos (estilo similar a buscar_cliente)
+                cliente_obj = buscar_cliente(clientes, nombre_c)
+                servicio_obj = buscar_servicio(servicios, nombre_s)
+
+                if cliente_obj and servicio_obj:
+                    duracion = float(input("Duración en horas: "))
+                    # Se crea el objeto reserva
+                    nueva_reserva = Reserva(cliente_obj, servicio_obj, duracion)
+                    reservas.append(nueva_reserva)
+                    print("Reserva creada exitosamente.")
+                else:
+                    print("Error: Cliente o Servicio no encontrados.")
+
+            elif opcion == "2":
+                for r in reservas:
+                    r.mostrar_detalle()
+
+            elif opcion == "3":
+                nom_res = input("Nombre de la reserva a confirmar: ")
+                for r in reservas:
+                    if r._nombre.lower() == nom_res.lower():
+                        r.confirmar()
+
+            elif opcion == "4":
+                nom_res = input("Nombre de la reserva a cancelar: ")
+                for r in reservas:
+                    if r._nombre.lower() == nom_res.lower():
+                        r.cancelar()
+
+            elif opcion == "5":
+                break
+            else:
+                print("Opción inválida")
+
+        except Exception as e:
+            log_error("Error en menú de reservas", e)
+            print(f"Error: {e}")
 
 # =========================
 # MENU PRINCIPAL
@@ -100,9 +159,10 @@ def menu():
     while True:
         print("\n===== SISTEMA SOFTWARE FJ =====")
         print("1. Gestionar clientes")
-        print("2. Gestionar servicios")  
-        print("3. Simulación completa")
-        print("4. Salir")
+        print("2. Gestionar servicios") 
+        print("3. Gestionar reservas") 
+        print("4. Simulación completa")
+        print("5. Salir")
 
         opcion = input("Seleccione: ")
 
@@ -111,10 +171,10 @@ def menu():
         elif opcion == "2":             
             menu_servicios()
         elif opcion == "3":
-            # Pasamos la lista de servicios para que la simulación la use
-            ejecutar_simulacion(clientes, servicios, []) 
-        
+            menu_reservas()
         elif opcion == "4":
+            ejecutar_simulacion(clientes, servicios, []) 
+        elif opcion == "5":
             log_evento("Usuario seleccionó salir del sistema")
             log_cierre_sesion()
             print("Saliendo")

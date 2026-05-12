@@ -123,6 +123,11 @@ def agregar_servicio(lista):
         log_error("Error en menú de servicios", e)
         print(f"Error: {e}")
 
+def buscar_servicio(lista_servicios, nombre_buscar):
+    for s in lista_servicios:
+        if s._nombre.lower() == nombre_buscar.lower():
+            return s
+    return None
 
 def eliminar_servicio(lista, nombre):
     for s in lista:
