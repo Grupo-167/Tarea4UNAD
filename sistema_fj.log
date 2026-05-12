@@ -114,3 +114,123 @@
 2026-05-12 12:59:24 | INFO     | Usuario seleccionó salir del sistema
 2026-05-12 12:59:24 | INFO     | SESIÓN CERRADA CORRECTAMENTE
 2026-05-12 12:59:24 | INFO     | ============================================================
+2026-05-12 13:17:58 | INFO     | ============================================================
+2026-05-12 13:17:58 | INFO     | NUEVA SESIÓN INICIADA - 2026-05-12 13:17:58
+2026-05-12 13:17:58 | INFO     | ============================================================
+2026-05-12 13:18:30 | INFO     | Usuario seleccionó salir del sistema
+2026-05-12 13:18:30 | INFO     | SESIÓN CERRADA CORRECTAMENTE
+2026-05-12 13:18:30 | INFO     | ============================================================
+2026-05-12 13:35:31 | INFO     | ============================================================
+2026-05-12 13:35:31 | INFO     | NUEVA SESIÓN INICIADA - 2026-05-12 13:35:31
+2026-05-12 13:35:31 | INFO     | ============================================================
+2026-05-12 13:35:37 | INFO     | OP01 | Cliente válido registrado: Juan Pérez
+2026-05-12 13:35:37 | ERROR    | OP02 | Edad inválida rechazada | Excepción: ErrorEdadInvalida: [Código E002] La edad '-5' no es válida. Debe ser un número mayor a 0.
+2026-05-12 13:35:37 | ERROR    | OP03 | Estado inválido rechazado | Excepción: ErrorEstadoInvalido: [Código E003] El estado 'suspendido' no es válido. Use 'activo' o 'inactivo'.
+2026-05-12 13:35:37 | ERROR    | OP04 | Nombre vacío rechazado | Excepción: ErrorNombreVacio: [Código E001] El nombre no puede estar vacío.
+2026-05-12 13:35:37 | INFO     | OP05 | Cliente válido registrado: María López
+2026-05-12 13:35:37 | INFO     | OP06 | Cliente actualizado: Juan Pérez → edad 31
+2026-05-12 13:35:37 | WARNING  | OP07 | Búsqueda sin resultado
+2026-05-12 13:35:37 | ERROR    | OP08 | Servicio no disponible al reservar | Excepción: ErrorServicioNoDisponible: [Código E005] El servicio 'Sala VIP' no está disponible en este momento.
+2026-05-12 13:35:37 | ERROR    | OP09 | Duración inválida rechazada | Excepción: ErrorDuracionInvalida: [Código E006] La duración '-2' no es válida. Debe ser un número positivo.
+2026-05-12 13:35:37 | ERROR    | OP10 | Intento de operar reserva cancelada | Excepción: ErrorReservaCancelada: [Código E008] No se puede operar sobre una reserva que ya fue cancelada.
+2026-05-12 13:35:37 | ERROR    | OP11 | Parámetro faltante al crear cliente | Excepción: ErrorParametroFaltante: [Código E009] El parámetro 'estado' es obligatorio y no fue proporcionado.
+2026-05-12 13:35:37 | INFO     | OP12 | Listado de 2 cliente(s) mostrado
+2026-05-12 13:35:37 | INFO     | OP13 | Registro 01 creado: María
+2026-05-12 13:35:37 | INFO     | OP13 | Registro 01 procesado — resultado: OK
+2026-05-12 13:35:37 | INFO     | OP13 | Registro 02 creado: Carlos
+2026-05-12 13:35:37 | INFO     | OP13 | Registro 02 procesado — resultado: OK
+2026-05-12 13:35:37 | INFO     | OP13 | Registro 03 creado: Sofía
+2026-05-12 13:35:37 | INFO     | OP13 | Registro 03 procesado — resultado: OK
+2026-05-12 13:35:37 | ERROR    | OP13 | Registro 04 rechazado — nombre vacío | Excepción: ErrorNombreVacio: [Código E001] El nombre no puede estar vacío.
+2026-05-12 13:35:37 | INFO     | OP13 | Registro 04 procesado — resultado: FALLO
+2026-05-12 13:35:37 | ERROR    | OP13 | Registro 05 rechazado — edad inválida: -5 | Excepción: ErrorEdadInvalida: [Código E002] La edad '-5' no es válida. Debe ser un número mayor a 0.
+2026-05-12 13:35:37 | INFO     | OP13 | Registro 05 procesado — resultado: FALLO
+2026-05-12 13:35:37 | ERROR    | OP13 | Registro 06 rechazado — estado inválido: otros | Excepción: ErrorEstadoInvalido: [Código E003] El estado 'otros' no es válido. Use 'activo' o 'inactivo'.
+2026-05-12 13:35:37 | INFO     | OP13 | Registro 06 procesado — resultado: FALLO
+2026-05-12 13:35:37 | INFO     | OP13 | Registro 07 creado: Andrés
+2026-05-12 13:35:37 | INFO     | OP13 | Registro 07 procesado — resultado: OK
+2026-05-12 13:35:37 | ERROR    | OP13 | Registro 08 rechazado — edad inválida: 0 | Excepción: ErrorEdadInvalida: [Código E002] La edad '0' no es válida. Debe ser un número mayor a 0.
+2026-05-12 13:35:37 | INFO     | OP13 | Registro 08 procesado — resultado: FALLO
+2026-05-12 13:35:37 | INFO     | OP13 | Registro 09 creado: Felipe
+2026-05-12 13:35:37 | INFO     | OP13 | Registro 09 procesado — resultado: OK
+2026-05-12 13:35:37 | INFO     | OP13 | Registro 10 creado: Valentina
+2026-05-12 13:35:37 | INFO     | OP13 | Registro 10 procesado — resultado: OK
+2026-05-12 13:35:37 | INFO     | OP13 | Inserción masiva finalizada: 6 OK, 4 fallidos
+2026-05-12 13:36:04 | INFO     | Usuario seleccionó salir del sistema
+2026-05-12 13:36:04 | INFO     | SESIÓN CERRADA CORRECTAMENTE
+2026-05-12 13:36:04 | INFO     | ============================================================
+2026-05-12 13:56:00 | INFO     | ============================================================
+2026-05-12 13:56:00 | INFO     | NUEVA SESIÓN INICIADA - 2026-05-12 13:56:00
+2026-05-12 13:56:00 | INFO     | ============================================================
+2026-05-12 13:56:08 | INFO     | OP01 | Cliente válido registrado: Juan Pérez
+2026-05-12 13:56:08 | ERROR    | OP02 | Edad inválida rechazada | Excepción: ErrorEdadInvalida: [Código E002] La edad '-5' no es válida. Debe ser un número mayor a 0.
+2026-05-12 13:56:08 | ERROR    | OP03 | Estado inválido rechazado | Excepción: ErrorEstadoInvalido: [Código E003] El estado 'suspendido' no es válido. Use 'activo' o 'inactivo'.
+2026-05-12 13:56:08 | ERROR    | OP04 | Nombre vacío rechazado | Excepción: ErrorNombreVacio: [Código E001] El nombre no puede estar vacío.
+2026-05-12 13:56:08 | INFO     | OP05 | Cliente válido registrado: María López
+2026-05-12 13:56:08 | INFO     | OP06 | Cliente actualizado: Juan Pérez → edad 31
+2026-05-12 13:56:08 | WARNING  | OP07 | Búsqueda sin resultado
+2026-05-12 13:56:08 | ERROR    | OP08 | Servicio no disponible al reservar | Excepción: ErrorServicioNoDisponible: [Código E005] El servicio 'Sala VIP' no está disponible en este momento.
+2026-05-12 13:56:08 | ERROR    | OP09 | Duración inválida rechazada | Excepción: ErrorDuracionInvalida: [Código E006] La duración '-2' no es válida. Debe ser un número positivo.
+2026-05-12 13:56:08 | ERROR    | OP10 | Intento de operar reserva cancelada | Excepción: ErrorReservaCancelada: [Código E008] No se puede operar sobre una reserva que ya fue cancelada.
+2026-05-12 13:56:08 | ERROR    | OP11 | Parámetro faltante al crear cliente | Excepción: ErrorParametroFaltante: [Código E009] El parámetro 'estado' es obligatorio y no fue proporcionado.
+2026-05-12 13:56:08 | INFO     | OP12 | Listado de 2 cliente(s) mostrado
+2026-05-12 13:56:08 | INFO     | OP13 | Registro 01 creado: María
+2026-05-12 13:56:08 | INFO     | OP13 | Registro 01 procesado — resultado: OK
+2026-05-12 13:56:08 | INFO     | OP13 | Registro 02 creado: Carlos
+2026-05-12 13:56:08 | INFO     | OP13 | Registro 02 procesado — resultado: OK
+2026-05-12 13:56:08 | INFO     | OP13 | Registro 03 creado: Sofía
+2026-05-12 13:56:08 | INFO     | OP13 | Registro 03 procesado — resultado: OK
+2026-05-12 13:56:08 | ERROR    | OP13 | Registro 04 rechazado — nombre vacío | Excepción: ErrorNombreVacio: [Código E001] El nombre no puede estar vacío.
+2026-05-12 13:56:08 | INFO     | OP13 | Registro 04 procesado — resultado: FALLO
+2026-05-12 13:56:08 | ERROR    | OP13 | Registro 05 rechazado — edad inválida: -5 | Excepción: ErrorEdadInvalida: [Código E002] La edad '-5' no es válida. Debe ser un número mayor a 0.
+2026-05-12 13:56:08 | INFO     | OP13 | Registro 05 procesado — resultado: FALLO
+2026-05-12 13:56:08 | ERROR    | OP13 | Registro 06 rechazado — estado inválido: otros | Excepción: ErrorEstadoInvalido: [Código E003] El estado 'otros' no es válido. Use 'activo' o 'inactivo'.
+2026-05-12 13:56:08 | INFO     | OP13 | Registro 06 procesado — resultado: FALLO
+2026-05-12 13:56:08 | INFO     | OP13 | Registro 07 creado: Andrés
+2026-05-12 13:56:08 | INFO     | OP13 | Registro 07 procesado — resultado: OK
+2026-05-12 13:56:08 | ERROR    | OP13 | Registro 08 rechazado — edad inválida: 0 | Excepción: ErrorEdadInvalida: [Código E002] La edad '0' no es válida. Debe ser un número mayor a 0.
+2026-05-12 13:56:08 | INFO     | OP13 | Registro 08 procesado — resultado: FALLO
+2026-05-12 13:56:08 | INFO     | OP13 | Registro 09 creado: Felipe
+2026-05-12 13:56:08 | INFO     | OP13 | Registro 09 procesado — resultado: OK
+2026-05-12 13:56:08 | INFO     | OP13 | Registro 10 creado: Valentina
+2026-05-12 13:56:08 | INFO     | OP13 | Registro 10 procesado — resultado: OK
+2026-05-12 13:56:08 | INFO     | OP13 | Inserción masiva finalizada: 6 OK, 4 fallidos
+2026-05-12 14:08:08 | INFO     | ============================================================
+2026-05-12 14:08:08 | INFO     | NUEVA SESIÓN INICIADA - 2026-05-12 14:08:08
+2026-05-12 14:08:08 | INFO     | ============================================================
+2026-05-12 14:08:13 | INFO     | OP01 | Cliente válido registrado: Juan Pérez
+2026-05-12 14:08:13 | ERROR    | OP02 | Edad inválida rechazada | Excepción: ErrorEdadInvalida: [Código E002] La edad '-5' no es válida. Debe ser un número mayor a 0.
+2026-05-12 14:08:13 | ERROR    | OP03 | Estado inválido rechazado | Excepción: ErrorEstadoInvalido: [Código E003] El estado 'suspendido' no es válido. Use 'activo' o 'inactivo'.
+2026-05-12 14:08:13 | ERROR    | OP04 | Nombre vacío rechazado | Excepción: ErrorNombreVacio: [Código E001] El nombre no puede estar vacío.
+2026-05-12 14:08:13 | INFO     | OP05 | Cliente válido registrado: María López
+2026-05-12 14:08:13 | INFO     | OP06 | Cliente actualizado: Juan Pérez → edad 31
+2026-05-12 14:08:13 | WARNING  | OP07 | Búsqueda sin resultado
+2026-05-12 14:08:13 | ERROR    | OP08 | Servicio no disponible al reservar | Excepción: ErrorServicioNoDisponible: [Código E005] El servicio 'Sala VIP' no está disponible en este momento.
+2026-05-12 14:08:13 | ERROR    | OP09 | Duración inválida rechazada | Excepción: ErrorDuracionInvalida: [Código E006] La duración '-2' no es válida. Debe ser un número positivo.
+2026-05-12 14:08:13 | ERROR    | OP10 | Intento de operar reserva cancelada | Excepción: ErrorReservaCancelada: [Código E008] No se puede operar sobre una reserva que ya fue cancelada.
+2026-05-12 14:08:13 | ERROR    | OP11 | Parámetro faltante al crear cliente | Excepción: ErrorParametroFaltante: [Código E009] El parámetro 'estado' es obligatorio y no fue proporcionado.
+2026-05-12 14:08:13 | INFO     | OP12 | Listado de 2 cliente(s) mostrado
+2026-05-12 14:08:13 | INFO     | OP13 | Registro 01 creado: María
+2026-05-12 14:08:13 | INFO     | OP13 | Registro 01 procesado — resultado: OK
+2026-05-12 14:08:13 | INFO     | OP13 | Registro 02 creado: Carlos
+2026-05-12 14:08:13 | INFO     | OP13 | Registro 02 procesado — resultado: OK
+2026-05-12 14:08:13 | INFO     | OP13 | Registro 03 creado: Sofía
+2026-05-12 14:08:13 | INFO     | OP13 | Registro 03 procesado — resultado: OK
+2026-05-12 14:08:13 | ERROR    | OP13 | Registro 04 rechazado — nombre vacío | Excepción: ErrorNombreVacio: [Código E001] El nombre no puede estar vacío.
+2026-05-12 14:08:13 | INFO     | OP13 | Registro 04 procesado — resultado: FALLO
+2026-05-12 14:08:13 | ERROR    | OP13 | Registro 05 rechazado — edad inválida: -5 | Excepción: ErrorEdadInvalida: [Código E002] La edad '-5' no es válida. Debe ser un número mayor a 0.
+2026-05-12 14:08:13 | INFO     | OP13 | Registro 05 procesado — resultado: FALLO
+2026-05-12 14:08:13 | ERROR    | OP13 | Registro 06 rechazado — estado inválido: otros | Excepción: ErrorEstadoInvalido: [Código E003] El estado 'otros' no es válido. Use 'activo' o 'inactivo'.
+2026-05-12 14:08:13 | INFO     | OP13 | Registro 06 procesado — resultado: FALLO
+2026-05-12 14:08:13 | INFO     | OP13 | Registro 07 creado: Andrés
+2026-05-12 14:08:13 | INFO     | OP13 | Registro 07 procesado — resultado: OK
+2026-05-12 14:08:13 | ERROR    | OP13 | Registro 08 rechazado — edad inválida: 0 | Excepción: ErrorEdadInvalida: [Código E002] La edad '0' no es válida. Debe ser un número mayor a 0.
+2026-05-12 14:08:13 | INFO     | OP13 | Registro 08 procesado — resultado: FALLO
+2026-05-12 14:08:13 | INFO     | OP13 | Registro 09 creado: Felipe
+2026-05-12 14:08:13 | INFO     | OP13 | Registro 09 procesado — resultado: OK
+2026-05-12 14:08:13 | INFO     | OP13 | Registro 10 creado: Valentina
+2026-05-12 14:08:13 | INFO     | OP13 | Registro 10 procesado — resultado: OK
+2026-05-12 14:08:13 | INFO     | OP13 | Inserción masiva finalizada: 6 OK, 4 fallidos
+2026-05-12 14:10:17 | INFO     | ============================================================
+2026-05-12 14:10:17 | INFO     | NUEVA SESIÓN INICIADA - 2026-05-12 14:10:17
+2026-05-12 14:10:17 | INFO     | ============================================================
